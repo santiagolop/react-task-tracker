@@ -8,6 +8,6 @@ You may also see any lint errors in the console.
 
 ### `npm run server`
 
-Runs the local .\
+Runs the local server.\
 Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
 
