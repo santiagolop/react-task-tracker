@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Limpiar el cuarto",
+      "day": "5 de marzo a las 16:00",
+      "reminder": true
+    },
+    {
+      "id": 3,
+      "text": "Lavar la ropa",
+      "day": "10 de abril a las 19:30",
+      "reminder": true
+    },
+    {
+      "text": "Estudiar",
+      "date": "Ahora",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Aprender React",
+      "date": "Este año",
+      "reminder": true,
+      "id": 5
+    }
+  ]
+}
