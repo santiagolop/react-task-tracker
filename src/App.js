@@ -5,6 +5,7 @@ import { Tasks } from "./components/Tasks";
 import { Footer } from "./components/Footer";
 import { About } from "./components/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { API_URL } from "./helpers/constants";
 
 function App() {
   const [tasks, setTasks] = useState([])
@@ -15,14 +16,14 @@ function App() {
   const [form, setForm] = useState(false)
 
   const fetchTasks = async () => {
-    const tasks = await fetch('http://localhost:5000/tasks')
+    const tasks = await fetch(API_URL)
     const data = await tasks.json()
 
     setTasks(data)
   }
 
   const deleteTask = id => {
-    fetch(`http://localhost:5000/tasks/${id}`, {method: 'DELETE'})
+    fetch(`${API_URL}/${id}`, {method: 'DELETE'})
     .then(() => setTasks(tasks.filter(task => task.id != id)))
   }
 
@@ -36,14 +37,14 @@ function App() {
       body: JSON.stringify(updatedTask)
     };
 
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, requestOptions)
+    const res = await fetch(`${API_URL}/${id}`, requestOptions)
     const data = await res.json()
 
     setTasks(tasks.map((task) => task.id === id ? {...task, reminder: data.reminder} : task))
   }
 
   const fetchTask = async (id) => {
-    const tasks = await fetch(`http://localhost:5000/tasks/${id}`)
+    const tasks = await fetch(`${API_URL}/${id}`)
     const data = await tasks.json()
 
     return data
@@ -56,7 +57,7 @@ function App() {
       body: JSON.stringify(task)
     };
 
-    const res = await fetch(`http://localhost:5000/tasks`, requestOptions)
+    const res = await fetch(API_URL, requestOptions)
     const data = await res.json()
     setTasks([...tasks, data])
   }
