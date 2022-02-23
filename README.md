@@ -1,13 +1,5 @@
-### `npm start`
+## React Task Tracker
+A simple task tracker made with react.js, react-router-dom and json-server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run server`
-
-Runs the local server.\
-Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
-
+### Try it!
+Check it at https://santiagos-react-task-tracker.herokuapp.com/
